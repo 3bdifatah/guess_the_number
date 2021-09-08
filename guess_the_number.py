@@ -46,13 +46,13 @@ def main():
             guess_count += 1
             
             if result == correct:
+                print(f'Thanks for playing the game! You won in {guess_count} guesses.')
                 break
-
         play_again=input("do you want to play again? y/n").lower()
         if play_again == 'y' or play_again =='yes':
             main()
         else:
-            print(f'Thanks for playing the game! You won in {str(guess_count)} guesses.')
+            print('Thanks for playing.')
     except ValueError as e:
         print("Error, please enter integer between 1-10 and restart the program")
 
