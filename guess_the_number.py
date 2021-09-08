@@ -46,7 +46,7 @@ def main():
 
         print('Thanks for playing the game!')
     except ValueError as e:
-        print("Error! please enter integer between 1-10 and try again")
+        print("Error, please enter integer between 1-10 and restart the program")
 
 
 if __name__ == '__main__':
