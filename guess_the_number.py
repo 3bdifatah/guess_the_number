@@ -35,15 +35,18 @@ def main():
     (low, high) = configure_range()
     secret = generate_secret(low, high)
 
-    while True:
-        guess = get_guess()
-        result = check_guess(guess, secret)
-        print(result)
+    try:
+        while True:
+            guess = get_guess()
+            result = check_guess(guess, secret)
+            print(result)
 
-        if result == correct:
-            break
+            if result == correct:
+                break
 
-    print('Thanks for playing the game!')
+        print('Thanks for playing the game!')
+    except ValueError as e:
+        print("Error, please enter integer between 1-10 and restart the program")
 
 
 if __name__ == '__main__':
